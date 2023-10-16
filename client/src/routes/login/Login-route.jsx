@@ -1,14 +1,14 @@
 import { useState } from "react";
 import {Link} from 'react-router-dom'
 
-const Register = () => {
+const Login = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
-    const register = async (ev) => {
+    const Login = async (ev) => {
       ev.preventDefault();
    
-      fetch('http://localhost:9000/api/auth/register', {
+      fetch('http://localhost:9000/api/auth/login', {
       method: 'post',
       headers: {
         'Content-type': "application/json"
@@ -28,16 +28,16 @@ const Register = () => {
 
   return (
     <div className='bg-blue-50 h-screen flex items-center'>
-      <form className='w-64 mx-auto' onSubmit={register}>
+      <form className='w-64 mx-auto' onSubmit={Login}>
         <input type="text" placeholder='username' 
         value={username} onChange={ev => setUsername(ev.target.value)}
         className='block w-full rounded-sm p-2 mb-2 border' />
         <input type="password" placeholder='password' 
         value={password} onChange={ev => setPassword(ev.target.value)} className='block w-full rounded-sm p-2 mb-2 border' />
-        <button type="submit" className='block bg-blue-500 text-white w-full rounded-sm p-2 mb-2 border'>Register</button>
+        <button type="submit" className='block bg-blue-500 text-white w-full rounded-sm p-2 mb-2 border'>Login</button>
         <span className="block text-[12px] cursor-pointer">
           <Link to='/login'>
-          Do you have a account?
+          Don't you have a account?
           </Link>
           </span>
       </form>
@@ -45,4 +45,4 @@ const Register = () => {
   )
 }
 
-export default Register;
+export default Login;

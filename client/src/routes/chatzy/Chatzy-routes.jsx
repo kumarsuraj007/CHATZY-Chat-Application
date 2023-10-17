@@ -6,6 +6,7 @@ const Chatzy = () => {
   return (
     <div className='flex w-full'>
       <Sidebar />
+      <div className='border-l border-gray-300'></div> {/* Add this div for the line */}
       <Chat />
     </div>
   )

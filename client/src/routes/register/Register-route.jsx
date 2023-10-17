@@ -35,7 +35,7 @@ const Register = () => {
         <input type="password" placeholder='password' 
         value={password} onChange={ev => setPassword(ev.target.value)} className='block w-full rounded-sm p-2 mb-2 border' />
         <button type="submit" className='block bg-blue-500 text-white w-full rounded-sm p-2 mb-2 border'>Register</button>
-        <span className="block text-[12px] cursor-pointer">
+        <span className="block text-[12px] cursor-pointer text-blue-500">
           <Link to='/login'>
           Do you have a account?
           </Link>
